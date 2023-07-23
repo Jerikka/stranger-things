@@ -22,7 +22,6 @@ export const Register = () => {
       } else if (username.length < 3) {
         setErrorMessage('Username must be at least 3 characters long')
       } else if (password === confirmPassword) {
-        setErrorMessage('')
         try {
           const response = await registerUser(username, password);
             navigate.push("/login");
