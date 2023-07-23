@@ -17,16 +17,12 @@ export const Login = () => {
         if (username && password) {
             try {
                 const response = await loginUser(username, password);
-                if (response.success) {
                     setIsLoggedIn(true)
                     localStorage.setItem('token', response.data.token)
                     localStorage.setItem('username', response.data.username)
                     localStorage.setItem('password', response.data.password)
                     console.log(response);
                     navigate.push("/Home");
-                } else {
-                    setErrorMessage('Incorrect username or password')
-                }
             } catch (error) {
                 console.log(error);
             }

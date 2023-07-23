@@ -25,13 +25,9 @@ export const Register = () => {
         setErrorMessage('')
         try {
           const response = await registerUser(username, password);
-          console.log(response)
-          if (response.success) {
             navigate.push("/login");
             setErrorMessage('');
-          } else {
-            setErrorMessage('Incorrect username or password')
-          }
+            return response
         } catch (error) {
           console.log(error);
         }
