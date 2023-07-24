@@ -25,8 +25,8 @@ export const NewPost = () => {
                     location,
                     willDeliver
                 );
-                console.log(response);
                 navigate("/Home");
+                return response;
             } catch (error) {
                 console.log(error);
             }

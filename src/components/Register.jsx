@@ -24,7 +24,7 @@ export const Register = () => {
       } else if (password === confirmPassword) {
         try {
           const response = await registerUser(username, password);
-            navigate.push("/login");
+            navigate("/login");
             setErrorMessage('');
             return response
         } catch (error) {

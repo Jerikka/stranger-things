@@ -22,7 +22,7 @@ export const Login = () => {
                     localStorage.setItem('username', response.data.username)
                     localStorage.setItem('password', response.data.password)
                     console.log(response);
-                    navigate.push("/Home");
+                    navigate("/Home");
             } catch (error) {
                 console.log(error);
             }
@@ -42,7 +42,7 @@ export const Login = () => {
 
 
     if (isLoggedIn) {
-        return navigate.push("/Home")
+        return navigate("/Home")
     }
 
     return (
